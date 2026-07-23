@@ -176,8 +176,9 @@ footer{border-top:1px solid var(--border-soft);padding:36px 0;margin-top:30px}
 .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
 .foot a{color:var(--dim);transition:.2s}.foot a:hover{color:var(--neon)}
 
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
+/* Le contenu n'est masqué (pour l'animation) QUE si le JS est actif → jamais de page vide. */
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+html.js .reveal.in{opacity:1;transform:none}
 
 @media(max-width:900px){
   .hero-grid,.about-grid{grid-template-columns:1fr}
@@ -197,6 +198,9 @@ footer{border-top:1px solid var(--border-soft);padding:36px 0;margin-top:30px}
 [data-lang="fr"] .en{display:none}
 [data-lang="en"] .fr{display:none}
 
+/* Accessibilité : si l'utilisateur a activé "réduire les animations", on montre le contenu
+   instantanément (pas de saut), tout en gardant les décorations légères (halo/rotation). */
 @media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  html.js .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  html.js .circuit path{transition:none !important}
 }

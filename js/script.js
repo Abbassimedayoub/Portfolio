@@ -1,3 +1,6 @@
+// Signale que le JS fonctionne → active les animations "reveal" (sinon contenu visible par défaut).
+document.documentElement.classList.add("js");
+
 // ---- CV files (both live in /cv). Relative paths → work on GitHub Pages too. ----
 const CV = {
   fr: "cv/CV_Abbassi_Med_Ayoub_FR.pdf",
@@ -11,7 +14,10 @@ const cvLink = document.getElementById("cvLink");
 // Point the "Download CV" badge to the CV matching the current language.
 function syncCv() {
   const lang = root.getAttribute("data-lang") === "en" ? "en" : "fr";
-  if (cvLink) cvLink.setAttribute("href", CV[lang]);
+  if (cvLink) {
+    cvLink.setAttribute("href", CV[lang]);
+    cvLink.setAttribute("download", "CV_Abbassi_Med_Ayoub_" + lang.toUpperCase() + ".pdf");
+  }
 }
 syncCv();
 

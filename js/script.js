@@ -19,7 +19,39 @@ function syncCv() {
     cvLink.setAttribute("download", "CV_Abbassi_Med_Ayoub_" + lang.toUpperCase() + ".pdf");
   }
 }
+
+async function triggerCvDownload(event) {
+  if (!cvLink) {
+    return;
+  }
+
+  event.preventDefault();
+
+  try {
+    const response = await fetch(cvLink.href);
+    if (!response.ok) {
+      throw new Error("Unable to fetch CV file");
+    }
+
+    const blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const tempLink = document.createElement("a");
+    tempLink.href = objectUrl;
+    tempLink.download = cvLink.download;
+    tempLink.rel = "noopener";
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    tempLink.remove();
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+  } catch (error) {
+    window.open(cvLink.href, "_blank", "noopener");
+  }
+}
+
 syncCv();
+if (cvLink) {
+  cvLink.addEventListener("click", triggerCvDownload);
+}
 
 // ---- Language toggle ----
 langBtn.addEventListener("click", () => {

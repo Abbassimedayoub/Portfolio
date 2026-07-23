@@ -1,99 +1,275 @@
-// Signale que le JS fonctionne → active les animations "reveal" (sinon contenu visible par défaut).
-document.documentElement.classList.add("js");
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abbassi Med Ayoub — Full-Stack Developer → DevOps &amp; Cloud</title>
+<meta name="description" content="Abbassi Med Ayoub — Développeur Full-Stack en évolution vers DevOps & Cloud. Double compétence santé & software. React · Django · Docker." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
 
-// ---- CV files (both live in /cv). Relative paths → work on GitHub Pages too. ----
-const CV = {
-  fr: "cv/CV_Abbassi_Med_Ayoub_FR.pdf",
-  en: "cv/CV_Abbassi_Med_Ayoub_EN.pdf",
-};
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <nav class="nav-left" id="navLeft">
+      <a href="#top" class="nav-item">//01. <span class="br">&lt;</span><b>Home</b><span class="br">/&gt;</span></a>
+      <a href="#about" class="nav-item">//02. <span class="br">&lt;</span><b>About</b><span class="br">/&gt;</span></a>
+    </nav>
+    <a href="#top" class="brand">A<span>M</span>A<span>/</span></a>
+    <div class="nav-right" id="navRight">
+      <a href="#projects" class="nav-item">//03. <span class="br">&lt;</span><b>Projects</b><span class="br">/&gt;</span></a>
+      <a href="#contact" class="nav-item">//04. <span class="br">&lt;</span><b>Contact</b><span class="br">/&gt;</span></a>
+      <button class="lang" id="langBtn"><b>FR</b> · EN</button>
+      <button class="burger" id="burger">≡</button>
+    </div>
+  </div>
+</header>
 
-const root = document.documentElement;
-const langBtn = document.getElementById("langBtn");
-const cvLink = document.getElementById("cvLink");
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="this reveal">&lt;p&gt;<span class="neon"><span class="fr">Bonjour, voici</span><span class="en">This is</span></span>&lt;/p&gt;</p>
+        <span class="h1tag reveal">&lt;h1&gt;</span>
+        <h1 class="reveal">Abbassi<br/><span class="l2">Med Ayoub</span></h1>
+        <span class="h1tag reveal">&lt;/h1&gt;</span>
+        <p class="role reveal">&lt;p&gt; <span class="fr">Développeur Full-Stack</span><span class="en">Full-Stack Developer</span> <span class="arrow">➔</span> DevOps &amp; Cloud &lt;/p&gt;</p>
+        <div class="cta-row reveal">
+          <a href="#projects" class="btn btn-primary">❯ <span class="fr">Voir mes projets</span><span class="en">View projects</span></a>
+          <a href="#contact" class="btn btn-ghost"><span class="fr">Me contacter</span><span class="en">Contact me</span></a>
+        </div>
+        <div class="hero-badges reveal">
+          <span>📍 <b>Villejuif (94)</b> · IDF</span>
+          <span><i class="pulse"></i> <b class="fr">Disponible</b><b class="en">Available</b></span>
+          <span>🗣 FR · EN · AR</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="cv-badge">
+          <div class="cv-ring r1"></div>
+          <div class="cv-ring r2"><span class="cv-dot"></span></div>
+          <div class="cv-ring r3"></div>
+          <a class="cv-core" id="cvLink" href="cv/CV_Abbassi_Med_Ayoub_FR.pdf" download="CV_Abbassi_Med_Ayoub_FR.pdf">&lt;Download<br/>CV/&gt;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- circuit connector to About -->
+  <svg class="circuit" style="top:82%;width:340px;height:220px" viewBox="0 0 340 220" aria-hidden="true">
+    <path d="M170 0 V70 Q170 100 140 100 H40 Q10 100 10 130 V210"/>
+    <circle class="node" cx="10" cy="212" r="6"/>
+  </svg>
+</section>
 
-// Point the "Download CV" badge to the CV matching the current language.
-function syncCv() {
-  const lang = root.getAttribute("data-lang") === "en" ? "en" : "fr";
-  if (cvLink) {
-    cvLink.setAttribute("href", CV[lang]);
-    cvLink.setAttribute("download", "CV_Abbassi_Med_Ayoub_" + lang.toUpperCase() + ".pdf");
-  }
-}
-syncCv();
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="h-tag">//02. <span class="neon">&lt;About/&gt;</span></span>
+      <h2 class="sec-title" data-close="&lt;/h2&gt;"><span class="fr">Mon Parcours</span><span class="en">My Journey</span></h2>
+      <p class="sec-sub"><span class="fr">De la précision du bloc opératoire à l'automatisation cloud — une trajectoire, une même exigence.</span><span class="en">From operating-theatre precision to cloud automation — one path, the same standard.</span></p>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p><span class="fr">Développeur Full-Stack formé à <strong>Holberton School Paris</strong> (pédagogie intensive par projets), spécialisé <strong>React</strong>, <strong>Django REST</strong> et <strong>Node.js</strong>. Ancien <strong>infirmier de bloc opératoire</strong>, j'apporte une rigueur de zéro-erreur, une vraie gestion de crise et une pensée « systèmes ».</span>
+        <span class="en">Full-Stack developer trained at <strong>Holberton School Paris</strong> (intensive, project-based), specialised in <strong>React</strong>, <strong>Django REST</strong> and <strong>Node.js</strong>. A former <strong>operating-theatre nurse</strong>, I bring a zero-error standard, real crisis management and systems thinking.</span></p>
+        <p><span class="fr">Ma direction est claire : consolider mon socle full-stack sur des projets réels, puis monter en <strong>DevOps &amp; Cloud</strong> (Docker, CI/CD, Linux, automatisation). Ce portfolio est <strong>conteneurisé et déployé via un pipeline</strong> — ma première brique DevOps.</span>
+        <span class="en">My direction is clear: consolidate my full-stack foundation on real projects, then grow into <strong>DevOps &amp; Cloud</strong> (Docker, CI/CD, Linux, automation). This portfolio is <strong>containerised and shipped through a pipeline</strong> — my first DevOps building block.</span></p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl-item">
+          <span class="ph">01</span>
+          <div class="tl-step"><span class="fr">Le point de départ</span><span class="en">The origin</span></div>
+          <h4><span class="fr">Santé / Paramédical</span><span class="en">Healthcare / Paramedical</span></h4>
+          <div class="org"><span class="fr">Infirmier de bloc · 2019–2022 · Tunisie</span><span class="en">Scrub nurse · 2019–2022 · Tunisia</span></div>
+          <p><span class="fr">Environnement stérile à responsabilité vitale : précision sous pression, fiabilité, sang-froid.</span><span class="en">Sterile, life-critical environment: precision under pressure, reliability, composure.</span></p>
+        </div>
+        <div class="tl-item">
+          <span class="ph">02</span>
+          <div class="tl-step"><span class="fr">Le virage</span><span class="en">The pivot</span></div>
+          <h4>Holberton School Paris</h4>
+          <div class="org"><span class="fr">Bachelor Dév. Full-Stack · 2023–2026</span><span class="en">Software Eng. Bachelor · 2023–2026</span></div>
+          <p><span class="fr">Coding intensif par projets : algorithmique, back-end, front-end, bases de données, Linux.</span><span class="en">Intensive project-based coding: algorithms, back-end, front-end, databases, Linux.</span></p>
+        </div>
+        <div class="tl-item">
+          <span class="ph">03</span>
+          <div class="tl-step"><span class="fr">La maîtrise</span><span class="en">The mastery</span></div>
+          <h4><span class="fr">Full-Stack Web</span><span class="en">Full-Stack Web</span></h4>
+          <div class="org">React · Django REST · Node.js</div>
+          <p><span class="fr">Applications complètes du modèle de données à l'interface — dont Santech (medtech).</span><span class="en">Complete apps from data model to UI — including Santech (medtech).</span></p>
+        </div>
+        <div class="tl-item">
+          <span class="ph">04</span>
+          <div class="tl-step"><span class="fr">L'évolution</span><span class="en">The evolution</span></div>
+          <h4>DevOps &amp; Cloud</h4>
+          <div class="org">Docker · CI/CD · Linux · Cloud</div>
+          <p><span class="fr">En cours : conteneurisation, pipelines automatisés et fondamentaux cloud.</span><span class="en">In progress: containerisation, automated pipelines and cloud fundamentals.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="circuit" style="top:88%;width:300px;height:170px" viewBox="0 0 300 170" aria-hidden="true">
+    <path d="M30 0 V50 Q30 80 60 80 H260 Q290 80 290 110 V160"/>
+    <circle class="node" cx="290" cy="162" r="6"/>
+  </svg>
+</section>
 
-// ---- Language toggle ----
-langBtn.addEventListener("click", () => {
-  const n = root.getAttribute("data-lang") === "fr" ? "en" : "fr";
-  root.setAttribute("data-lang", n);
-  root.setAttribute("lang", n);
-  langBtn.innerHTML = n === "fr" ? "<b>FR</b> · EN" : "FR · <b>EN</b>";
-  syncCv();
-});
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="h-tag">//—. <span class="neon">&lt;Skills/&gt;</span></span>
+      <h2 class="sec-title" data-close="&lt;/h2&gt;"><span class="fr">Stack Technique</span><span class="en">Skill Matrix</span></h2>
+      <p class="sec-sub"><span class="fr"><span class="mono" style="color:#fbbf24">⟳</span> = en apprentissage actif (axe DevOps/Cloud).</span><span class="en"><span class="mono" style="color:#fbbf24">⟳</span> = actively learning (DevOps/Cloud track).</span></p>
+    </div>
+    <div class="bento">
+      <div class="cell span2 reveal">
+        <h4>▹ Frontend <span class="n">// react-core</span></h4>
+        <div class="chips">
+          <span class="chip core">React.js</span><span class="chip core">JavaScript ES6+</span><span class="chip">TypeScript</span>
+          <span class="chip">Tailwind CSS</span><span class="chip">Framer Motion</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Jest</span>
+        </div>
+      </div>
+      <div class="cell span2 reveal">
+        <h4>▹ Backend <span class="n">// api-layer</span></h4>
+        <div class="chips">
+          <span class="chip core">Python</span><span class="chip core">Django</span><span class="chip core">Django REST</span>
+          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST API</span><span class="chip">JWT</span><span class="chip">Flask</span>
+        </div>
+      </div>
+      <div class="cell span2 reveal">
+        <h4>▹ Database <span class="n">// data</span></h4>
+        <div class="chips">
+          <span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQLite</span><span class="chip">MongoDB</span><span class="chip">Redis</span>
+        </div>
+      </div>
+      <div class="cell span2 reveal">
+        <h4>▹ DevOps &amp; Cloud <span class="n">// infra</span></h4>
+        <div class="chips">
+          <span class="chip core">Linux</span><span class="chip core">Bash/Shell</span><span class="chip core">Git</span>
+          <span class="chip learn">Docker</span><span class="chip learn">CI/CD</span><span class="chip learn">GitHub Actions</span><span class="chip learn">Cloud</span><span class="chip learn">Automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="circuit" style="top:90%;width:260px;height:150px" viewBox="0 0 260 150" aria-hidden="true">
+    <path d="M130 0 V60 Q130 90 100 90 H30 Q0 90 0 120 V140"/>
+    <circle class="node" cx="0" cy="142" r="6"/>
+  </svg>
+</section>
 
-// ---- Mobile menu ----
-const burger = document.getElementById("burger");
-burger.addEventListener("click", () => {
-  document.getElementById("navLeft").classList.toggle("mobile-open");
-});
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="h-tag">//03. <span class="neon">&lt;Projects/&gt;</span></span>
+      <h2 class="sec-title" data-close="&lt;/h2&gt;"><span class="fr">Mes Réalisations</span><span class="en">My Portfolio</span></h2>
+    </div>
+    <div class="proj-grid">
+      <!-- SANTECH FLAGSHIP CASE STUDY -->
+      <article class="proj flag reveal">
+        <div class="proj-top">
+          <div class="proj-ico">🏥</div>
+          <div class="proj-links">
+            <a href="https://youtu.be/XO5b9wKNm84" target="_blank" rel="noopener">▶ <span class="fr">Démo</span><span class="en">Demo</span></a>
+            <a href="https://github.com/Abbassimedayoub/Santech" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+          </div>
+        </div>
+        <h3>Santech</h3>
+        <span class="flag-badge">★ <span class="fr">Projet phare · Medtech</span><span class="en">Flagship · Medtech</span></span>
+        <p><span class="fr">Plateforme de gestion pour établissements de santé — le pont entre mon expertise médicale et le développement full-stack moderne.</span>
+        <span class="en">Management platform for healthcare facilities — the bridge between my medical domain expertise and modern full-stack development.</span></p>
+        <div class="case">
+          <div class="block"><div class="k"><span class="fr">Problème</span><span class="en">Problem</span></div><p><span class="fr">Les établissements jonglent entre stocks de médicaments, RH, fournisseurs et facturation sur des outils dispersés.</span><span class="en">Facilities juggle drug inventory, HR, suppliers and billing across scattered tools.</span></p></div>
+          <div class="block"><div class="k">Solution</div><p><span class="fr">Une appli unifiée : inventaire, gestion employés/salaires, demandes clients et facturation, en temps réel.</span><span class="en">A unified app: inventory, employee/payroll, customer requests and billing, in real time.</span></p></div>
+          <div class="block"><div class="k">Architecture</div><p><span class="fr">Front React ⟶ API Django REST sécurisée par JWT ⟶ PostgreSQL. Conteneurisé avec Docker.</span><span class="en">React front ⟶ JWT-secured Django REST API ⟶ PostgreSQL. Containerised with Docker.</span></p></div>
+          <div class="block"><div class="k"><span class="fr">Défi relevé</span><span class="en">Challenge</span></div><p><span class="fr">Modéliser un domaine métier riche et sécuriser les échanges front/back (JWT, CORS).</span><span class="en">Modelling a rich business domain and securing front/back exchanges (JWT, CORS).</span></p></div>
+        </div>
+        <div class="proj-stack"><span>React</span><span>Django REST</span><span>PostgreSQL</span><span>Docker</span><span>JWT</span></div>
+      </article>
 
-// ---- Reveal on scroll ----
-const io = new IntersectionObserver(
-  (es) =>
-    es.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("in");
-        io.unobserve(e.target);
-      }
-    }),
-  { threshold: 0.12 }
-);
-document.querySelectorAll(".reveal").forEach((el, i) => {
-  el.style.transitionDelay = (i % 3) * 70 + "ms";
-  io.observe(el);
-});
+      <article class="proj reveal">
+        <div class="proj-top"><div class="proj-ico">🗂️</div><div class="proj-links"><a href="https://github.com/Abbassimedayoub/holbertonschool-files_manager" target="_blank" rel="noopener">&lt;/&gt; Code</a></div></div>
+        <h3>Files Manager</h3>
+        <p><span class="fr">API REST de hosting/partage de fichiers : auth par token, permissions, génération asynchrone de miniatures via file d'attente.</span>
+        <span class="en">File hosting/sharing REST API: token auth, permissions, async thumbnail generation via a queue.</span></p>
+        <div class="proj-stack"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span><span>Bull</span></div>
+      </article>
 
-// ---- Circuit line draw-in ----
-const cio = new IntersectionObserver(
-  (es) => es.forEach((e) => { if (e.isIntersecting) e.target.classList.add("drawn"); }),
-  { threshold: 0.2 }
-);
-document.querySelectorAll(".circuit").forEach((c) => cio.observe(c));
+      <article class="proj reveal">
+        <div class="proj-top"><div class="proj-ico">🏠</div><div class="proj-links"><a href="https://github.com/Abbassimedayoub/holbertonschool-AirBnB_clone_v4" target="_blank" rel="noopener">&lt;/&gt; Code</a></div></div>
+        <h3>AirBnB Clone v4</h3>
+        <p><span class="fr">Plateforme full-stack : front dynamique + API REST Flask, persistance MySQL via ORM SQLAlchemy, tests unitaires.</span>
+        <span class="en">Full-stack platform: dynamic front + Flask REST API, MySQL persistence via SQLAlchemy ORM, unit tests.</span></p>
+        <div class="proj-stack"><span>Python</span><span>Flask</span><span>MySQL</span><span>SQLAlchemy</span><span>MVC</span></div>
+      </article>
 
-// ---- Magnetic buttons ----
-document.querySelectorAll(".btn,.node-btn,.cv-core").forEach((b) => {
-  b.addEventListener("mousemove", (e) => {
-    const r = b.getBoundingClientRect();
-    const x = e.clientX - r.left - r.width / 2;
-    const y = e.clientY - r.top - r.height / 2;
-    b.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
-  });
-  b.addEventListener("mouseleave", () => (b.style.transform = ""));
-});
+      <article class="proj reveal">
+        <div class="proj-top"><div class="proj-ico">⚛️</div><div class="proj-links"><a href="https://github.com/Abbassimedayoub/holbertonschool-web_react" target="_blank" rel="noopener">&lt;/&gt; Code</a></div></div>
+        <h3><span class="fr">React &amp; TypeScript</span><span class="en">React &amp; TypeScript</span></h3>
+        <p><span class="fr">Composants, hooks, gestion d'état et outillage de build (Webpack/Babel), avec tests automatisés Jest.</span>
+        <span class="en">Components, hooks, state management and build tooling (Webpack/Babel), with automated Jest tests.</span></p>
+        <div class="proj-stack"><span>React</span><span>TypeScript</span><span>Webpack</span><span>Jest</span></div>
+      </article>
+    </div>
+    <p class="sec-sub reveal" style="margin-top:26px;font-family:var(--mono);font-size:13px"><span class="fr">// Plus de repos sur </span><span class="en">// More repos on </span><a href="https://github.com/Abbassimedayoub" target="_blank" rel="noopener" class="neon">github.com/Abbassimedayoub ↗</a></p>
+  </div>
+  <svg class="circuit" style="top:96%;width:200px;height:120px" viewBox="0 0 200 120" aria-hidden="true">
+    <path d="M100 0 V50 Q100 75 100 75 V110"/>
+    <circle class="node" cx="100" cy="112" r="6"/>
+  </svg>
+</section>
 
-// ---- Bento glow follows the cursor ----
-document.querySelectorAll(".cell").forEach((c) => {
-  c.addEventListener("mousemove", (e) => {
-    const r = c.getBoundingClientRect();
-    c.style.setProperty("--mx", e.clientX - r.left + "px");
-    c.style.setProperty("--my", e.clientY - r.top + "px");
-  });
-});
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact-head">
+    <div class="reveal">
+      <span class="h-tag">//04. <span class="neon">&lt;Contact/&gt;</span></span>
+      <h2 class="sec-title" data-close="&lt;/h4&gt;"><span class="fr">Connectons-nous</span><span class="en">Connect with me</span></h2>
+    </div>
+    <div class="nodes reveal">
+      <a class="node-btn" href="https://www.linkedin.com/in/mohamed-ayoub-abbassi" target="_blank" rel="noopener">
+        <span class="ic">in</span><span class="t">&lt;<span class="b">LinkedIn</span>/&gt;</span>
+      </a>
+      <a class="node-btn" href="https://github.com/Abbassimedayoub" target="_blank" rel="noopener">
+        <span class="ic">&lt;/&gt;</span><span class="t">&lt;<span class="b">GitHub</span>/&gt;</span>
+      </a>
+      <a class="node-btn" href="mailto:abbassimohamedayoub@gmail.com">
+        <span class="ic">✉</span><span class="t">&lt;<span class="b">Email</span>/&gt;</span>
+      </a>
+    </div>
+    <div class="copy-row reveal">
+      <span class="mono">abbassimohamedayoub@gmail.com</span>
+      <button class="copy-btn" id="copyBtn"><span class="fr">Copier</span><span class="en">Copy</span></button>
+    </div>
+    <form id="contactForm" action="https://formspree.io/f/VOTRE_ID" method="POST" class="reveal">
+      <div class="row">
+        <div><label for="name"><span class="fr">Nom</span><span class="en">Name</span></label><input id="name" name="name" required placeholder="Jane Doe"/></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="jane@company.com"/></div>
+      </div>
+      <div><label for="msg">Message</label><textarea id="msg" name="message" required placeholder="&gt; ..."></textarea></div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center">❯ <span class="fr">Envoyer le message</span><span class="en">Send message</span></button>
+      <p class="form-note"><span class="fr">// Branche ton endpoint Formspree (gratuit) à la place de VOTRE_ID.</span><span class="en">// Wire your free Formspree endpoint in place of VOTRE_ID.</span></p>
+    </form>
+  </div>
+</section>
 
-// ---- Copy email ----
-const copyBtn = document.getElementById("copyBtn");
-copyBtn.addEventListener("click", () => {
-  const t = "abbassimohamedayoub@gmail.com";
-  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject())
-    .then(() => {
-      const fr = root.getAttribute("data-lang") === "fr";
-      copyBtn.textContent = fr ? "Copié ✓" : "Copied ✓";
-      setTimeout(
-        () => (copyBtn.innerHTML = '<span class="fr">Copier</span><span class="en">Copy</span>'),
-        1600
-      );
-    })
-    .catch(() => {});
-});
+<footer>
+  <div class="wrap foot">
+    <p>© <span id="year"></span> Abbassi Med Ayoub · <span class="fr">Codé avec</span><span class="en">Built with</span> <span class="neon">❯</span> HTML · CSS · JS</p>
+    <div style="display:flex;gap:18px">
+      <a href="https://github.com/Abbassimedayoub" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mohamed-ayoub-abbassi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:abbassimohamedayoub@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
 
-// ---- Footer year ----
-document.getElementById("year").textContent = new Date().getFullYear();
+<script src="js/script.js"></script>
+</body>
+</html>

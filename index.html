@@ -4,9 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abbassi Med Ayoub — Full-Stack Developer → DevOps &amp; Cloud</title>
+  <title data-fr="Abbassi Med Ayoub — Consultant IA / AI Engineer · RAG &amp; Agentic AI"
+    data-en="Abbassi Med Ayoub — AI Consultant / AI Engineer · RAG &amp; Agentic AI">Abbassi Med Ayoub — Consultant IA / AI Engineer · RAG &amp; Agentic AI</title>
   <meta name="description"
-    content="Abbassi Med Ayoub — Développeur Full-Stack en évolution vers DevOps & Cloud. Double compétence santé & software. React · Django · Docker." />
+    content="Consultant IA : RAG, bases vectorielles, recherche sémantique et agents IA. Intégration de LLM sur un socle Full-Stack &amp; Cloud. Découvrez FAN-iD."
+    data-fr="Consultant IA : RAG, bases vectorielles, recherche sémantique et agents IA. Intégration de LLM sur un socle Full-Stack &amp; Cloud. Découvrez FAN-iD."
+    data-en="AI consulting: RAG, vector databases, semantic search and AI agents. LLM integration on a Full-Stack &amp; Cloud foundation. Discover FAN-iD." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -20,19 +23,22 @@
   <!-- NAV -->
   <header class="nav">
     <div class="wrap nav-inner">
-      <nav class="nav-left" id="navLeft">
-        <a href="#top" class="nav-item">//01. <span class="br">&lt;</span><b>Home</b><span class="br">/&gt;</span></a>
-        <a href="#about" class="nav-item">//02. <span class="br">&lt;</span><b>About</b><span
-            class="br">/&gt;</span></a>
+      <nav class="nav-left" id="navLeft" aria-label="Navigation">
+        <a href="#top" class="nav-item">//01. <span class="br">&lt;</span><b><span class="fr">Accueil</span><span
+              class="en">Home</span></b><span class="br">/&gt;</span></a>
+        <a href="#about" class="nav-item">//02. <span class="br">&lt;</span><b><span class="fr">Bio</span><span
+              class="en">About</span></b><span class="br">/&gt;</span></a>
+        <a href="#fan-id" class="nav-item">//03. <span class="br">&lt;</span><b>FAN-iD</b><span class="br">/&gt;</span></a>
       </nav>
       <a href="#top" class="brand">A<span>M</span>A<span>/</span></a>
       <div class="nav-right" id="navRight">
-        <a href="#projects" class="nav-item">//03. <span class="br">&lt;</span><b>Projects</b><span
+        <a href="#projects" class="nav-item">//04. <span class="br">&lt;</span><b><span class="fr">Projets</span><span
+              class="en">Projects</span></b><span class="br">/&gt;</span></a>
+        <a href="#contact" class="nav-item">//05. <span class="br">&lt;</span><b>Contact</b><span
             class="br">/&gt;</span></a>
-        <a href="#contact" class="nav-item">//04. <span class="br">&lt;</span><b>Contact</b><span
-            class="br">/&gt;</span></a>
-        <button class="lang" id="langBtn"><b>FR</b> · EN</button>
-        <button class="burger" id="burger">≡</button>
+        <button class="lang" id="langBtn" type="button" aria-label="Passer en anglais"><b>FR</b> · EN</button>
+        <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="navLeft"
+          aria-expanded="false">≡</button>
       </div>
     </div>
   </header>
@@ -47,8 +53,8 @@
           <span class="h1tag reveal">&lt;h1&gt;</span>
           <h1 class="reveal">Abbassi<br /><span class="l2">Med Ayoub</span></h1>
           <span class="h1tag reveal">&lt;/h1&gt;</span>
-          <p class="role reveal">&lt;p&gt; <span class="fr">Développeur Full-Stack</span><span class="en">Full-Stack
-              Developer</span> <span class="arrow">➔</span> DevOps &amp; Cloud &lt;/p&gt;</p>
+          <p class="role reveal">&lt;p&gt; <span class="fr">Consultant IA</span><span class="en">AI Consultant</span>
+            <span class="arrow">➔</span> RAG &amp; Agentic AI &lt;/p&gt;</p>
           <div class="cta-row reveal">
             <a href="#projects" class="btn btn-primary">❯ <span class="fr">Voir mes projets</span><span class="en">View
                 projects</span></a>
@@ -87,9 +93,9 @@
         <span class="h-tag">//02. <span class="neon">&lt;About/&gt;</span></span>
         <h2 class="sec-title" data-close="&lt;/h2&gt;"><span class="fr">Mon Parcours</span><span class="en">My
             Journey</span></h2>
-        <p class="sec-sub"><span class="fr">De la précision du bloc opératoire à l'automatisation cloud — une
-            trajectoire, une même exigence.</span><span class="en">From operating-theatre precision to cloud automation
-            — one path, the same standard.</span></p>
+        <p class="sec-sub"><span class="fr">De la précision du bloc opératoire à l'ingénierie IA — un socle
+            Full-Stack &amp; Cloud, une même exigence.</span><span class="en">From operating-theatre precision to AI
+            engineering — a Full-Stack &amp; Cloud foundation, the same standard.</span></p>
       </div>
       <div class="about-grid">
         <div class="about-copy reveal">
@@ -102,12 +108,16 @@
               <strong>Node.js</strong>. A former <strong>operating-theatre nurse</strong>, I bring a zero-error
               standard, real crisis management and systems thinking.</span>
           </p>
-          <p><span class="fr">Ma direction est claire : consolider mon socle full-stack sur des projets réels, puis
-              monter en <strong>DevOps &amp; Cloud</strong> (Docker, CI/CD, Linux, automatisation). Ce portfolio est
-              <strong>conteneurisé et déployé via un pipeline</strong> — ma première brique DevOps.</span>
-            <span class="en">My direction is clear: consolidate my full-stack foundation on real projects, then grow
-              into <strong>DevOps &amp; Cloud</strong> (Docker, CI/CD, Linux, automation). This portfolio is
-              <strong>containerised and shipped through a pipeline</strong> — my first DevOps building block.</span>
+          <p><span class="fr">Mon évolution : <strong>Consultant IA / AI Engineer</strong>. Je développe mon expertise
+              en <strong>RAG (Retrieval-Augmented Generation)</strong>, bases vectorielles et recherche sémantique.
+              J'explore l'<strong>Agentic AI</strong> : agents autonomes, orchestration multi-agents, utilisation
+              d'outils et workflows IA. Mon socle <strong>Full-Stack &amp; Cloud</strong> soutient cette évolution
+              vers l'intégration et le déploiement de <strong>LLM en production</strong>.</span>
+            <span class="en">My next step: <strong>AI Consultant / AI Engineer</strong>. I am developing my expertise
+              in <strong>RAG (Retrieval-Augmented Generation)</strong>, vector databases and semantic search.
+              I explore <strong>Agentic AI</strong>: autonomous agents, multi-agent orchestration, tool use and AI
+              workflows. My <strong>Full-Stack &amp; Cloud</strong> foundation supports this progression towards
+              integrating and deploying <strong>LLMs in production</strong>.</span>
           </p>
         </div>
         <div class="tl reveal">
@@ -143,10 +153,11 @@
           <div class="tl-item">
             <span class="ph">04</span>
             <div class="tl-step"><span class="fr">L'évolution</span><span class="en">The evolution</span></div>
-            <h4>DevOps &amp; Cloud</h4>
-            <div class="org">Docker · CI/CD · Linux · Cloud</div>
-            <p><span class="fr">En cours : conteneurisation, pipelines automatisés et fondamentaux cloud.</span><span
-                class="en">In progress: containerisation, automated pipelines and cloud fundamentals.</span></p>
+            <h4><span class="fr">Consultant IA / AI Engineer</span><span class="en">AI Consultant / AI Engineer</span></h4>
+            <div class="org">RAG · Agentic AI · LLM · Full-Stack &amp; Cloud</div>
+            <p><span class="fr">Spécialisation en cours : recherche sémantique, agents autonomes et intégration de LLM,
+                du prototype au déploiement.</span><span class="en">Current specialization: semantic search,
+                autonomous agents and LLM integration, from prototype to deployment.</span></p>
           </div>
         </div>
       </div>
@@ -164,9 +175,9 @@
         <span class="h-tag">//—. <span class="neon">&lt;Skills/&gt;</span></span>
         <h2 class="sec-title" data-close="&lt;/h2&gt;"><span class="fr">Stack Technique</span><span class="en">Skill
             Matrix</span></h2>
-        <p class="sec-sub"><span class="fr"><span class="mono" style="color:#fbbf24">⟳</span> = en apprentissage actif
-            (axe DevOps/Cloud).</span><span class="en"><span class="mono" style="color:#fbbf24">⟳</span> = actively
-            learning (DevOps/Cloud track).</span></p>
+        <p class="sec-sub"><span class="fr"><span class="mono" style="color:#fbbf24">⟳</span> = en apprentissage actif,
+            avec une spécialisation IA sur un socle Full-Stack &amp; Cloud.</span><span class="en"><span class="mono"
+              style="color:#fbbf24">⟳</span> = actively learning, specializing in AI on a Full-Stack &amp; Cloud foundation.</span></p>
       </div>
       <div class="bento">
         <div class="cell span2 reveal">
@@ -195,12 +206,14 @@
           </div>
         </div>
         <div class="cell span2 reveal">
-          <h4>▹ DevOps &amp; Cloud <span class="n">// infra</span></h4>
+          <h4>▹ <span class="fr">IA &amp; Cloud</span><span class="en">AI &amp; Cloud</span> <span class="n">// intelligence</span></h4>
           <div class="chips">
-            <span class="chip core">Linux</span><span class="chip core">Bash/Shell</span><span
-              class="chip core">Git</span>
+            <span class="chip learn">RAG</span><span class="chip learn fr">Bases vectorielles</span><span
+              class="chip learn en">Vector databases</span><span class="chip learn fr">Recherche sémantique</span><span
+              class="chip learn en">Semantic search</span><span class="chip learn">Agentic AI</span><span class="chip learn">LLM</span>
+            <span class="chip core">Linux</span><span class="chip core">Bash/Shell</span><span class="chip core">Git</span>
             <span class="chip learn">Docker</span><span class="chip learn">CI/CD</span><span class="chip learn">GitHub
-              Actions</span><span class="chip learn">Cloud</span><span class="chip learn">Automation</span>
+              Actions</span><span class="chip learn">Cloud</span>
           </div>
         </div>
       </div>
@@ -211,11 +224,102 @@
     </svg>
   </section>
 
+  <!-- FAN-iD: content verified against main and deploy; one inline APK download QR. -->
+  <section id="fan-id" aria-labelledby="fan-id-title">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="h-tag">//03. <span class="neon">&lt;FAN-iD/&gt;</span></span>
+        <h2 class="sec-title" id="fan-id-title" data-close="&lt;/h2&gt;">FAN-iD</h2>
+        <p class="sec-sub"><span class="fr">Billetterie, gestion d'événements et contrôle d'accès — un projet
+            Full-Stack, mobile et Cloud.</span><span class="en">Ticketing, event management and admission control —
+            a Full-Stack, mobile and Cloud project.</span></p>
+      </div>
+      <div class="proj-grid">
+        <article class="proj reveal">
+          <div class="proj-top">
+            <div class="proj-ico" aria-hidden="true">🎟</div>
+          </div>
+          <h3><span class="fr">De la réservation à l'entrée</span><span class="en">From reservation to admission</span></h3>
+          <span class="flag-badge">★ <span class="fr">Projet individuel · Holberton School France</span><span
+              class="en">Individual project · Holberton School France</span></span>
+          <p><span class="fr">Conçu et développé de bout en bout comme projet de fin de formation : produit,
+              architecture, web, mobile, backend, déploiement, tests et documentation.</span><span class="en">Designed
+              and developed end to end as a final project: product, architecture, web, mobile, backend, deployment,
+              testing and documentation.</span></p>
+          <div class="case">
+            <div class="block">
+              <div class="k"><span class="fr">Le produit</span><span class="en">The product</span></div>
+              <p><span class="fr">Un portail React pour les organisateurs et administrateurs ; une application Flutter
+                  pour les fans et les équipes de contrôle. Catalogue, réservations, billets, transferts et suivi des
+                  entrées.</span><span class="en">A React portal for organizers and administrators; a Flutter app for
+                  fans and entrance staff. Event browsing, reservations, tickets, transfers and admission tracking.</span></p>
+            </div>
+            <div class="block">
+              <div class="k">Architecture</div>
+              <p><span class="fr">Une API Django REST en monolithe modulaire, PostgreSQL, Redis/Valkey et Celery.
+                  Transactions, idempotence et outbox pour coordonner les opérations métier.</span><span class="en">A
+                  modular-monolith Django REST API, PostgreSQL, Redis/Valkey and Celery. Transactions, idempotency and
+                  an outbox coordinate business operations.</span></p>
+            </div>
+            <div class="block">
+              <div class="k"><span class="fr">Fiabilité</span><span class="en">Reliability</span></div>
+              <p><span class="fr">Confirmation et émission des billets dans une même transaction après webhook Stripe
+                  signé. QR dynamiques signés, contrôle côté serveur et protection contre la double entrée.</span><span
+                  class="en">Transactional order confirmation and ticket issuance after a signed Stripe webhook.
+                  Signed dynamic QR codes, server-side validation and duplicate-entry protection.</span></p>
+            </div>
+            <div class="block">
+              <div class="k"><span class="fr">Déploiement</span><span class="en">Deployment</span></div>
+              <p><span class="fr">Web sur Cloudflare Pages, API et tâches Celery sur Render, médias sur Cloudflare R2.
+                  Démonstration avec paiements Stripe en mode test.</span><span class="en">Web on Cloudflare Pages,
+                  API and Celery tasks on Render, media on Cloudflare R2. Demonstration with Stripe payments in test mode.</span></p>
+            </div>
+          </div>
+          <div class="case reveal">
+            <div class="block">
+              <div class="k"><span class="fr">Explorer FAN-iD</span><span class="en">Explore FAN-iD</span></div>
+              <p><span class="fr">Découvrez le portail web, le code source ou l'application Android.</span><span
+                  class="en">Explore the web portal, source code or Android application.</span></p>
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://fan-id.pages.dev" target="_blank" rel="noopener noreferrer">↗
+                  <span class="fr">Application web</span><span class="en">Web application</span></a>
+                <a class="btn btn-ghost" href="https://github.com/Abbassimedayoub/FAN-iD" target="_blank"
+                  rel="noopener noreferrer">&lt;/&gt; <span class="fr">Code source</span><span class="en">Source code</span></a>
+                <a class="btn btn-ghost" id="fan-id-apk"
+                  href="https://drive.google.com/uc?export=download&amp;id=1JjhKOMkzu647a-MrixvLKcewAINNyCSD"
+                  download="fanid.apk" target="_blank" rel="noopener noreferrer">↓ <span class="fr">APK Android</span><span
+                    class="en">Android APK</span></a>
+              </div>
+            </div>
+            <figure class="block contact-head">
+              <div class="k">Android</div>
+              <a href="https://drive.google.com/uc?export=download&amp;id=1JjhKOMkzu647a-MrixvLKcewAINNyCSD"
+                target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 45 45" shape-rendering="crispEdges" role="img" aria-labelledby="fanid-apk-qr-title fan-id-qr-caption" focusable="false">
+                    <title id="fanid-apk-qr-title" data-fr="FAN-iD · APK Android" data-en="FAN-iD · Android APK">FAN-iD · APK Android</title>
+                    <rect width="45" height="45" fill="var(--txt, #F8FAFC)"/>
+                    <path fill="var(--bg, #090C10)" d="M4 4h7v1h-7zM13 4h1v1h-1zM16 4h1v1h-1zM18 4h2v1h-2zM23 4h2v1h-2zM29 4h2v1h-2zM34 4h7v1h-7zM4 5h1v1h-1zM10 5h1v1h-1zM14 5h2v1h-2zM17 5h2v1h-2zM26 5h1v1h-1zM28 5h4v1h-4zM34 5h1v1h-1zM40 5h1v1h-1zM4 6h1v1h-1zM6 6h3v1h-3zM10 6h1v1h-1zM12 6h2v1h-2zM15 6h2v1h-2zM19 6h1v1h-1zM22 6h6v1h-6zM30 6h1v1h-1zM32 6h1v1h-1zM34 6h1v1h-1zM36 6h3v1h-3zM40 6h1v1h-1zM4 7h1v1h-1zM6 7h3v1h-3zM10 7h1v1h-1zM12 7h2v1h-2zM17 7h1v1h-1zM19 7h6v1h-6zM26 7h1v1h-1zM28 7h4v1h-4zM34 7h1v1h-1zM36 7h3v1h-3zM40 7h1v1h-1zM4 8h1v1h-1zM6 8h3v1h-3zM10 8h1v1h-1zM12 8h2v1h-2zM15 8h3v1h-3zM21 8h1v1h-1zM23 8h2v1h-2zM26 8h3v1h-3zM32 8h1v1h-1zM34 8h1v1h-1zM36 8h3v1h-3zM40 8h1v1h-1zM4 9h1v1h-1zM10 9h1v1h-1zM12 9h1v1h-1zM14 9h1v1h-1zM17 9h1v1h-1zM19 9h2v1h-2zM22 9h1v1h-1zM25 9h2v1h-2zM30 9h3v1h-3zM34 9h1v1h-1zM40 9h1v1h-1zM4 10h7v1h-7zM12 10h1v1h-1zM14 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM20 10h1v1h-1zM22 10h1v1h-1zM24 10h1v1h-1zM26 10h1v1h-1zM28 10h1v1h-1zM30 10h1v1h-1zM32 10h1v1h-1zM34 10h7v1h-7zM12 11h5v1h-5zM18 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM32 11h1v1h-1zM4 12h1v1h-1zM6 12h5v1h-5zM15 12h2v1h-2zM20 12h1v1h-1zM25 12h3v1h-3zM29 12h1v1h-1zM31 12h2v1h-2zM34 12h5v1h-5zM4 13h2v1h-2zM8 13h1v1h-1zM13 13h7v1h-7zM21 13h2v1h-2zM24 13h2v1h-2zM27 13h1v1h-1zM29 13h2v1h-2zM34 13h2v1h-2zM37 13h3v1h-3zM8 14h1v1h-1zM10 14h1v1h-1zM12 14h9v1h-9zM25 14h2v1h-2zM28 14h7v1h-7zM39 14h2v1h-2zM4 15h4v1h-4zM9 15h1v1h-1zM11 15h2v1h-2zM15 15h2v1h-2zM18 15h2v1h-2zM23 15h4v1h-4zM28 15h1v1h-1zM30 15h3v1h-3zM34 15h1v1h-1zM36 15h1v1h-1zM40 15h1v1h-1zM5 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM15 16h1v1h-1zM17 16h1v1h-1zM19 16h1v1h-1zM21 16h1v1h-1zM23 16h2v1h-2zM26 16h6v1h-6zM33 16h2v1h-2zM36 16h5v1h-5zM4 17h3v1h-3zM12 17h3v1h-3zM16 17h1v1h-1zM18 17h1v1h-1zM20 17h1v1h-1zM22 17h3v1h-3zM27 17h1v1h-1zM32 17h2v1h-2zM35 17h1v1h-1zM5 18h1v1h-1zM7 18h4v1h-4zM13 18h2v1h-2zM17 18h1v1h-1zM19 18h4v1h-4zM24 18h1v1h-1zM29 18h3v1h-3zM35 18h3v1h-3zM39 18h2v1h-2zM6 19h2v1h-2zM11 19h2v1h-2zM18 19h1v1h-1zM20 19h1v1h-1zM23 19h5v1h-5zM30 19h1v1h-1zM32 19h2v1h-2zM35 19h2v1h-2zM5 20h1v1h-1zM7 20h1v1h-1zM9 20h3v1h-3zM13 20h2v1h-2zM17 20h2v1h-2zM23 20h1v1h-1zM26 20h2v1h-2zM29 20h2v1h-2zM32 20h3v1h-3zM36 20h1v1h-1zM38 20h3v1h-3zM4 21h1v1h-1zM6 21h1v1h-1zM12 21h1v1h-1zM14 21h1v1h-1zM17 21h4v1h-4zM24 21h2v1h-2zM27 21h1v1h-1zM32 21h1v1h-1zM34 21h2v1h-2zM39 21h1v1h-1zM5 22h1v1h-1zM8 22h3v1h-3zM13 22h1v1h-1zM15 22h1v1h-1zM18 22h1v1h-1zM24 22h1v1h-1zM29 22h3v1h-3zM34 22h1v1h-1zM36 22h2v1h-2zM39 22h2v1h-2zM5 23h2v1h-2zM8 23h2v1h-2zM11 23h2v1h-2zM14 23h1v1h-1zM16 23h1v1h-1zM18 23h1v1h-1zM20 23h1v1h-1zM22 23h1v1h-1zM25 23h2v1h-2zM28 23h1v1h-1zM30 23h1v1h-1zM36 23h2v1h-2zM40 23h1v1h-1zM5 24h3v1h-3zM9 24h2v1h-2zM12 24h1v1h-1zM15 24h1v1h-1zM21 24h1v1h-1zM23 24h1v1h-1zM27 24h4v1h-4zM33 24h2v1h-2zM36 24h1v1h-1zM38 24h1v1h-1zM4 25h2v1h-2zM7 25h1v1h-1zM13 25h2v1h-2zM17 25h2v1h-2zM20 25h1v1h-1zM22 25h6v1h-6zM37 25h1v1h-1zM5 26h1v1h-1zM7 26h4v1h-4zM14 26h1v1h-1zM17 26h3v1h-3zM21 26h2v1h-2zM31 26h3v1h-3zM35 26h3v1h-3zM40 26h1v1h-1zM4 27h1v1h-1zM8 27h2v1h-2zM11 27h3v1h-3zM17 27h4v1h-4zM25 27h4v1h-4zM30 27h4v1h-4zM35 27h2v1h-2zM40 27h1v1h-1zM8 28h3v1h-3zM12 28h1v1h-1zM14 28h2v1h-2zM20 28h1v1h-1zM26 28h1v1h-1zM28 28h2v1h-2zM31 28h4v1h-4zM36 28h1v1h-1zM38 28h3v1h-3zM4 29h2v1h-2zM7 29h2v1h-2zM13 29h2v1h-2zM17 29h3v1h-3zM21 29h2v1h-2zM24 29h1v1h-1zM27 29h1v1h-1zM29 29h1v1h-1zM32 29h1v1h-1zM34 29h2v1h-2zM38 29h1v1h-1zM4 30h1v1h-1zM7 30h1v1h-1zM10 30h5v1h-5zM16 30h6v1h-6zM24 30h1v1h-1zM26 30h1v1h-1zM28 30h1v1h-1zM30 30h3v1h-3zM36 30h1v1h-1zM39 30h2v1h-2zM4 31h1v1h-1zM6 31h1v1h-1zM11 31h1v1h-1zM15 31h1v1h-1zM17 31h3v1h-3zM25 31h4v1h-4zM33 31h2v1h-2zM36 31h2v1h-2zM40 31h1v1h-1zM4 32h1v1h-1zM7 32h4v1h-4zM12 32h1v1h-1zM15 32h2v1h-2zM18 32h2v1h-2zM21 32h1v1h-1zM24 32h1v1h-1zM26 32h1v1h-1zM28 32h3v1h-3zM32 32h5v1h-5zM38 32h1v1h-1zM40 32h1v1h-1zM12 33h2v1h-2zM17 33h1v1h-1zM20 33h1v1h-1zM23 33h3v1h-3zM27 33h1v1h-1zM29 33h1v1h-1zM31 33h2v1h-2zM36 33h2v1h-2zM4 34h7v1h-7zM13 34h1v1h-1zM18 34h2v1h-2zM25 34h2v1h-2zM28 34h1v1h-1zM30 34h1v1h-1zM32 34h1v1h-1zM34 34h1v1h-1zM36 34h1v1h-1zM38 34h3v1h-3zM4 35h1v1h-1zM10 35h1v1h-1zM12 35h3v1h-3zM20 35h1v1h-1zM22 35h1v1h-1zM25 35h3v1h-3zM30 35h1v1h-1zM32 35h1v1h-1zM36 35h2v1h-2zM39 35h2v1h-2zM4 36h1v1h-1zM6 36h3v1h-3zM10 36h1v1h-1zM12 36h3v1h-3zM16 36h1v1h-1zM18 36h1v1h-1zM22 36h2v1h-2zM26 36h2v1h-2zM30 36h7v1h-7zM38 36h1v1h-1zM40 36h1v1h-1zM4 37h1v1h-1zM6 37h3v1h-3zM10 37h1v1h-1zM12 37h3v1h-3zM16 37h5v1h-5zM22 37h1v1h-1zM24 37h4v1h-4zM31 37h4v1h-4zM36 37h2v1h-2zM39 37h2v1h-2zM4 38h1v1h-1zM6 38h3v1h-3zM10 38h1v1h-1zM12 38h2v1h-2zM15 38h1v1h-1zM21 38h1v1h-1zM24 38h3v1h-3zM30 38h1v1h-1zM33 38h1v1h-1zM39 38h2v1h-2zM4 39h1v1h-1zM10 39h1v1h-1zM17 39h1v1h-1zM20 39h1v1h-1zM23 39h4v1h-4zM30 39h4v1h-4zM36 39h1v1h-1zM40 39h1v1h-1zM4 40h7v1h-7zM12 40h4v1h-4zM18 40h1v1h-1zM21 40h1v1h-1zM24 40h1v1h-1zM26 40h4v1h-4zM33 40h2v1h-2zM36 40h2v1h-2zM39 40h2v1h-2z"/>
+                  </svg>
+              </a>
+              <figcaption id="fan-id-qr-caption"><span class="fr">Scanner pour télécharger l'APK Android</span><span
+                  class="en">Scan to download Android APK</span></figcaption>
+              <p class="form-note"><span class="fr">APK de démonstration à installer manuellement. Google Drive peut
+                  demander une confirmation.</span><span class="en">Demo APK for manual installation. Google Drive
+                  may ask for confirmation.</span></p>
+            </figure>
+          </div>
+          <div class="proj-stack"><span>React</span><span>TypeScript</span><span>Flutter</span><span>Django REST</span>
+            <span>PostgreSQL</span><span>Celery</span><span>Docker</span><span>Cloudflare</span><span>Render</span><span>Stripe</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section id="projects">
     <div class="wrap">
       <div class="reveal">
-        <span class="h-tag">//03. <span class="neon">&lt;Projects/&gt;</span></span>
+        <span class="h-tag">//04. <span class="neon">&lt;Projects/&gt;</span></span>
         <h2 class="sec-title" data-close="&lt;/h2&gt;"><span class="fr">Mes Réalisations</span><span class="en">My
             Portfolio</span></h2>
       </div>
@@ -331,7 +435,7 @@
   <section id="contact">
     <div class="wrap contact-head">
       <div class="reveal">
-        <span class="h-tag">//04. <span class="neon">&lt;Contact/&gt;</span></span>
+        <span class="h-tag">//05. <span class="neon">&lt;Contact/&gt;</span></span>
         <h2 class="sec-title" data-close="&lt;/h4&gt;"><span class="fr">Connectons-nous</span><span class="en">Connect
             with me</span></h2>
       </div>
@@ -380,6 +484,64 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script>
+    // Page-specific additions stay here so the shared styles and script remain unchanged.
+    (() => {
+      const page = document.documentElement;
+      const languageButton = document.getElementById("langBtn");
+      const localizedTitles = document.querySelectorAll("title[data-fr][data-en]");
+      const description = document.querySelector('meta[name="description"]');
+
+      function syncPageLanguage() {
+        const language = page.getAttribute("data-lang") === "en" ? "en" : "fr";
+        localizedTitles.forEach((title) => { title.textContent = title.dataset[language]; });
+        description.content = description.dataset[language];
+        languageButton.setAttribute("aria-label", language === "fr" ? "Passer en anglais" : "Switch to French");
+      }
+
+      // Runs after the existing handler, which updates the language and CV link.
+      languageButton.addEventListener("click", syncPageLanguage);
+      syncPageLanguage();
+
+      const leftNav = document.getElementById("navLeft");
+      const rightNav = document.getElementById("navRight");
+      const menuButton = document.getElementById("burger");
+      const rightLinks = Array.from(rightNav.querySelectorAll(".nav-item"));
+      const mobile = window.matchMedia("(max-width: 900px)");
+
+      function closeMenu() {
+        leftNav.classList.remove("mobile-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+
+      function syncNavigation() {
+        closeMenu();
+        rightLinks.forEach((link) => {
+          if (mobile.matches) {
+            leftNav.appendChild(link);
+          } else {
+            rightNav.insertBefore(link, languageButton);
+          }
+        });
+      }
+
+      // Reuse the existing mobile-open component and the existing burger handler.
+      menuButton.addEventListener("click", () => {
+        menuButton.setAttribute("aria-expanded", String(leftNav.classList.contains("mobile-open")));
+      });
+      leftNav.addEventListener("click", (event) => {
+        if (event.target.closest('a[href^="#"]')) closeMenu();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && leftNav.classList.contains("mobile-open")) {
+          closeMenu();
+          menuButton.focus();
+        }
+      });
+      mobile.addEventListener("change", syncNavigation);
+      syncNavigation();
+    })();
+  </script>
 </body>
 
 </html>
